@@ -21,3 +21,13 @@ window.addEventListener("scroll", () => {
     }
     
 })
+
+document.addEventListener('click', function(event) {
+    // Check if the clicked element is not a portfolio item
+    if (!event.target.closest('.portfolio__item')) {
+      // Remove focus from all portfolio items
+      document.querySelectorAll('.portfolio__item').forEach(function(item) {
+        item.blur();
+      });
+    }
+  });
