@@ -412,11 +412,6 @@ header {
 
 }
 
-.portfolio__item:visited {
-    background: var(--color-accent);
-    overflow: hidden;
-}
-
 .portfolio__item > h3 {
     margin-left: auto;
     margin-right: auto;
@@ -435,6 +430,10 @@ header {
     
     position: relative;
     z-index: 2;
+}
+
+.portfolio__item:not(:focus) {
+    outline: none; /* Remove the default focus outline */
 }
 
 .portfolio__img:hover,
