@@ -4,6 +4,7 @@ import { resolve } from 'path';
 
 export default defineConfig({
 	plugins: [],
+	base: './',
 	build: { 
 		rollupOptions: { 
 			input: { 
