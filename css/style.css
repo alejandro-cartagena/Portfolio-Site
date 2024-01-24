@@ -406,8 +406,7 @@ header {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
-.portfolio__item,
-.portfolio__item:visited {
+.portfolio__item {
     background: var(--color-accent);
     overflow: hidden;
 
@@ -430,6 +429,7 @@ header {
 
 
 .portfolio__item:focus {
+    color: pink;
     position: relative;
     z-index: 2;
 }
