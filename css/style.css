@@ -426,10 +426,12 @@ header {
     min-height: 300px;
 }
 
-
+.portfolio__item:active {
+    background-color: pink;
+}
 
 .portfolio__item:focus {
-    color: pink;
+    
     position: relative;
     z-index: 2;
 }
