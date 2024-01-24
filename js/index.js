@@ -1,6 +1,9 @@
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelectorAll('.nav__link')
-const header = document.querySelector("header")
+const header = document.querySelector('header')
+const burgerMenu = document.querySelector('.nav-toggle')
+
+let isBurgerMenuOpen = false
 
 navToggle.addEventListener('click', () => {
     document.body.classList.toggle('nav-open');
@@ -22,12 +25,32 @@ window.addEventListener("scroll", () => {
     
 })
 
-document.addEventListener('click', function(event) {
-    // Check if the clicked element is not a portfolio item
-    if (!event.target.closest('.portfolio__item')) {
-      // Remove focus from all portfolio items
-      document.querySelectorAll('.portfolio__item').forEach(function(item) {
-        item.blur();
-      });
+burgerMenu.addEventListener('click', () => {
+    console.log('Click!!')
+    if (isBurgerMenuOpen) {
+        isBurgerMenuOpen = !isBurgerMenuOpen
+        disableScroll()
     }
-  });
+    else {
+        enableScroll()
+    }
+})
+
+function disableScroll() {
+    const scrollY = window.scrollY;
+
+    document.body.style.overflow = 'hidden';
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${scrollY}px`;
+}
+
+function enableScroll() {
+    const scrollY = parseInt(document.body.style.top || '0', 10);
+    document.body.style.overflow = '';
+    document.body.style.position = '';
+    document.body.style.top = '';
+    
+    window.scrollTo(0, scrollY);
+}
+
+

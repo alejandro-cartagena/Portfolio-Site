@@ -6,6 +6,11 @@
 
 /* Custom Properties, update these for your own design */
 
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
+
 :root {
     --ff-primary: 'Lora', serif;
     --ff-secondary: 'Roboto Slab', serif;
@@ -409,7 +414,6 @@ header {
 .portfolio__item {
     background: var(--color-accent);
     overflow: hidden;
-
 }
 
 .portfolio__item > h3 {
