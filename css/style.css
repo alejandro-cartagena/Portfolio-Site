@@ -142,15 +142,15 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0.5em 1em;
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
     position: sticky;
     top: 0;
     background-color: var(--color-light);
     z-index: 1000;
+    transition: all 0.3s;
 }
 
-.logo {
-    font-family: 'Source Code Pro', monospace;
+.change {
+    box-shadow: 0px 3px 14px 1px rgba(0,0,0,0.5);
 }
 
 .nav {
@@ -162,12 +162,9 @@ header {
     left: 0;
     right: 0;
     z-index: 100;
-    
     transform: translateX(100%);
     transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
 }
-
-
 
 .nav__list {
     list-style: none;
@@ -181,14 +178,19 @@ header {
 }
 
 .nav__link {
+    font-family: 'Source Code Pro', monospace;
     color: inherit;
-    font-weight: var(--fw-reg);
-    /* font-weight: var(--fw-bold); */
+    font-weight: 500;
     text-decoration: none;
+    font-size: 2rem;
 }
 
 .nav__link:hover {
     color: var(--color-accent);
+}
+
+.logo-link {
+    font-size: 0.85rem;
 }
 
 
@@ -207,10 +209,6 @@ header {
     transform: translateX(0);
 }
 
-.nav-open .nav-toggle {
-    position: fixed;
-}
-
 .nav-open .hamburger {
     transform: rotate(.625turn);
 }
@@ -222,11 +220,6 @@ header {
 .nav-open .hamburger::after {
     opacity: 0;
 }
-
-
-
-
-
 
 .hamburger {
     display: block;
@@ -495,7 +488,7 @@ header {
 
 .portfolio-item-container {
     max-width: 600px;
-    margin: 0 auto
+    margin: 3em auto
 }
 
 .back-link {
