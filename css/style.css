@@ -433,7 +433,8 @@ header {
 }
 
 .portfolio__item:not(:focus) {
-    outline: none; /* Remove the default focus outline */
+    opacity: 1.0; /* Remove the default focus outline */
+    transform: scale(1.0);
 }
 
 .portfolio__img:hover,
