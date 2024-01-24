@@ -25,32 +25,5 @@ window.addEventListener("scroll", () => {
     
 })
 
-burgerMenu.addEventListener('click', () => {
-    console.log('Click!!')
-    if (isBurgerMenuOpen) {
-        isBurgerMenuOpen = !isBurgerMenuOpen
-        disableScroll()
-    }
-    else {
-        enableScroll()
-    }
-})
-
-function disableScroll() {
-    const scrollY = window.scrollY;
-
-    document.body.style.overflow = 'hidden';
-    document.body.style.position = 'fixed';
-    document.body.style.top = `-${scrollY}px`;
-}
-
-function enableScroll() {
-    const scrollY = parseInt(document.body.style.top || '0', 10);
-    document.body.style.overflow = '';
-    document.body.style.position = '';
-    document.body.style.top = '';
-    
-    window.scrollTo(0, scrollY);
-}
 
 
