@@ -13,19 +13,9 @@ export default defineConfig({
 				portfolio_item_3: resolve(__dirname, 'portfolio-item-3.html'),
 				portfolio_item_4: resolve(__dirname, 'portfolio-item-4.html'),
 				portfolio_item_5: resolve(__dirname, 'portfolio-item-5.html'),
-				portfolio_item_6: resolve(__dirname, 'portfolio-item-6.html')
+				portfolio_item_6: resolve(__dirname, 'portfolio-item-6.html'),
+				app: resolve(__dirname, './js/index.js')
 			 }, 
 			},
 		 }, 
 })
-
-// export default defineConfig(
-// 	{ 
-// 		build: { 
-// 			rollupOptions: { 
-// 				input: { 
-// 					main: resolve(__dirname, 'index.html'), contact: resolve(__dirname, 'contact.html'), about: resolve(__dirname, 'about.html'),
-// 				 }, 
-// 				},
-// 			 }, 
-// 			});
